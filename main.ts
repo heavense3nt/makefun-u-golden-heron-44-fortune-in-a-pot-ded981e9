@@ -1,5 +1,4 @@
-// Fortune in a Pot — make.fun entry (program/v1).
-//
+// Fortune in a Pot — make.fun entry (program/v1), revised fortune.
 // Writes one kind, funny fortune for a houseplant — a single line of at
 // most 120 characters — to $MAKEFUN_OUTPUT_DIR/entry.txt.
 //
@@ -9,11 +8,11 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { isAbsolute, join } from "node:path";
 
-// The fortune: 105 characters, 20 words, one line. A fortune-teller's
-// whisper from the leaves themselves — sunshine, the warmest spot on the
-// windowsill, and a human who finally waters the plant on time.
+// The fortune: 111 characters, 18 words, one line. The leaves hold a
+// little meeting and deliver the verdict — sunshine, a roomier pot, and
+// a human who finally learned what "weekly watering" actually means.
 const FORTUNE: string =
-  "The leaves whisper it first: sunshine, a warm sill, and a human who finally waters you on time this week.";
+  "The leaves agree: sunshine, a roomier pot, and a human who finally learned that 'weekly watering' means weekly.";
 
 const outDir: string = process.env.MAKEFUN_OUTPUT_DIR ?? "output";
 // MAKEFUN_OUTPUT_DIR is used as-is when absolute; when relative it is
